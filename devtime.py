@@ -13,7 +13,7 @@ def start():
     config = load_config()
     break_interval = config["break_interval"] * 60
     print("DevTime Started.")
-    print("Next reminder in ", config["break_interval"], " minutes.")
+    print(f"Next reminder in ", config["break_interval"], " minutes.")
     while True:
         time.sleep(break_interval)
         remind()
