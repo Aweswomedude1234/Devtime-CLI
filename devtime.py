@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 
-BREAK_INTERVAL = 45 * 60
+from config import load_config
 
 
 def remind():
@@ -10,10 +10,12 @@ def remind():
     print("=" * 30)
 
 def start():
+    config = load_config()
+    break_interval = config["break_interval"] * 60
     print("DevTime Started.")
-    print("Next reminder in " + BREAK_INTERVAL // 60 + " minutes.")
+    print("Next reminder in ", config["break_interval"], " minutes.")
     while True:
-        time.sleep(BREAK_INTERVAL)
+        time.sleep(break_interval)
         remind()
 
 if __name__ == "__main__":
