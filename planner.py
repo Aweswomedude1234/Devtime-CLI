@@ -22,8 +22,8 @@ def create_plan(total_minutes, strategy, custom_work = None, custom_break = None
         if remaining > 0:
             current_break = min(break_time, remaining)
 
-        plan.append(("break", current_break))
-        remaining -= current_break
+            plan.append(("break", current_break))
+            remaining -= current_break
     return plan
         
 
