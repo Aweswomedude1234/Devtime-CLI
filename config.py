@@ -3,7 +3,7 @@ from pathlib import Path
 
 CONFIG_FILE = Path.home() / ".devtime.json"
 
-DEFAULT_CONFIG = {"break_interval": 45}
+DEFAULT_CONFIG = {"break_interval": 2}
 
 def load_config():
     if not CONFIG_FILE.exists():
