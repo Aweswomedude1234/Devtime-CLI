@@ -292,6 +292,10 @@ def main():
             print()
             print("Use /quit to exit.")
             continue
+        except EOFError:
+            print()
+            print("You have left the world of DevTime. Goodbye.")
+            break
 
         if command == "/start":
             start_session()
